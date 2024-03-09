@@ -8,12 +8,16 @@ import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.ScrollPane
 import javafx.scene.control.TextField
+import javafx.scene.image.Image
 import javafx.scene.input.TransferMode
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.GridPane
 import javafx.stage.Stage
 import java.io.File
 import java.util.UUID
+
+
+
 
 class HelloApplication : Application() {
 
@@ -27,6 +31,10 @@ class HelloApplication : Application() {
     private var currentFile: File? = null
 
     override fun start(primaryStage: Stage) {
+        primaryStage.icons.add(
+            Image("/icon.png")
+        )
+
         val root = BorderPane()
 
         val generateButton = Button("Fix").apply {
